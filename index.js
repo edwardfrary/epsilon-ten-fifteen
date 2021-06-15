@@ -131,8 +131,10 @@ const addQuestions = () => {
             } else if (data.choice === 'Intern') {
                 createIntern();
             } else {
+                console.log(employeeArr);
                 generatePage(employeeArr);
-            }
+                return;
+            };
         })
 };
 questions();

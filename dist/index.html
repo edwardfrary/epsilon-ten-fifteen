@@ -1,6 +1,4 @@
-const fs = require('fs');
 
-let pageHandler = `
 <!DOCTYPE html>
   <html lang="en">
   
@@ -15,22 +13,4 @@ let pageHandler = `
   </head>
   
   <body style ='background-color: darkcyan'>
-  `;
-
-module.exports = data => {
-
-    fs.writeFile('./dist/index.html', pageHandler, err => { });
-    console.log(data);
-     fs.appendFile("./dist/index.html", data, err => { })
-     
-    for (i = 0; i > data.length; i++) {
-        let employee = data[0];
-        let employeeCard = `<div class = "card"><h2>${employee}</h2></div>`;
-       ;
-    };
-    let pageEnder = `
-    </body>
-    </html>
-    `;
-    fs.appendFile("./dist/index.html", pageEnder, err =>{});
-};
+  
