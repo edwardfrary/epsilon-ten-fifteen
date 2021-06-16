@@ -132,16 +132,12 @@ const addQuestions = () => {
             } else if (data.choice === 'Intern') {
                 createIntern();
             } else if (data.choice === 'Quit') {
-                console.log('Roster: ' + employeeArr);
-                generatePage(employeeArr);
-                endPage();
+                 generatePage(employeeArr);
+            } else {
+                console.log("ERROR: Invalid Selection");
             };
 
-        })
-};
-
-function endPage(){
-    fs.appendFile("./dist/index.html", `</div></div></body></html>`, err => { });
+        });
 };
 
 questions();
