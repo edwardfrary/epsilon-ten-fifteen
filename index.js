@@ -3,6 +3,7 @@ const Engineer = require('./lib/Engineer');
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern.js');
 const generatePage = require('./src/generatePage.js');
+const fs = require('fs');
 
 const employeeArr = [];
 
@@ -133,8 +134,9 @@ const addQuestions = () => {
             } else {
                 console.log(employeeArr);
                 generatePage(employeeArr);
-                return;
             };
-        })
+        }).then(data => {
+            fs.appendFile("./dist/index.html", `</body></html>`, err => { });
+        });
 };
 questions();
