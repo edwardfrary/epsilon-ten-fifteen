@@ -37,7 +37,7 @@ module.exports = data => {
         </div>
         </div>
         <div class="row">`;
-            fs.appendFile("./dist/index.html", employeeCard, err => { });
+        fs.appendFile("./dist/index.html", employeeCard, err => { });
         }
 
         else if (data[i].type === 'Engineer') {
@@ -78,7 +78,4 @@ module.exports = data => {
             console.log("ERROR: NO TYPE DEFINED");
         };
     };
-
-    fs.appendFile("./dist/index.html", `</div></div></body></html>`, err => { })
-
 };

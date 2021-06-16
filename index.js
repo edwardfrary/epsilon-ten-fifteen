@@ -132,9 +132,16 @@ const addQuestions = () => {
             } else if (data.choice === 'Intern') {
                 createIntern();
             } else if (data.choice === 'Quit') {
-                console.log(employeeArr);
+                console.log('Roster: ' + employeeArr);
                 generatePage(employeeArr);
+                endPage();
             };
-        });
-    };
+
+        })
+};
+
+function endPage(){
+    fs.appendFile("./dist/index.html", `</div></div></body></html>`, err => { });
+};
+
 questions();
