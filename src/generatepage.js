@@ -16,7 +16,7 @@ let pageHandler =
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Public+Sans:300i,300,500&display=swap" >
     <link rel="stylesheet" href="style.css">
   </head>
-   <body style ='background-color: darkcyan'>
+   <body style ='background-color: lightcyan'>
    <div class = "container">
    <div class = "row">
   `;
@@ -30,7 +30,7 @@ module.exports = data => {
         if (data[i].type === 'Manager') {
             let employeeCard = `
         <div class = "col col-sm-4">
-        <div class = "card">
+        <div class = "card shadow">
         <div class = "card-body">
         <h3 class = 'card-title'>${data[i].name}</h3>
         <h3 class = 'card-subtitle text-muted'>${data[i].type}</h3>
@@ -50,7 +50,7 @@ module.exports = data => {
         else if (data[i].type === 'Engineer') {
             let employeeCard = `
             <div class = "col col-sm-4">
-            <div class = "card">
+            <div class = "card shadow">
             <div class = "card-body">
             <h3 class = 'card-title'>${data[i].name}</h3>
             <h3 class = 'card-subtitle text-muted'>${data[i].type}</h3>
@@ -70,7 +70,7 @@ module.exports = data => {
         else if (data[i].type === 'Intern') {
             let employeeCard = `
             <div class = "col col-sm-4">
-            <div class = "card">
+            <div class = "card shadow">
             <div class = "card-body">
             <h3 class = 'card-title'>${data[i].name}</h3>
             <h3 class = 'card-subtitle text-muted'>${data[i].type}</h3>
