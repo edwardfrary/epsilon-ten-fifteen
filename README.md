@@ -8,6 +8,10 @@ This application was created using node and jest for the purpose of employee tea
 ![testcode](./testcode.jpg) 
 ![rendered](./rendered.jpg)
 
+# Video
+
+Youtube: (https://youtu.be/OrnP1qjPZPo)
+
 ## Questions:
 Direct email: (edwardfrary@gmail.com)
 GitHub: (https://github.com/edwardfrary)
