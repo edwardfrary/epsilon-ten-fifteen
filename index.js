@@ -131,12 +131,10 @@ const addQuestions = () => {
                 createEngineer();
             } else if (data.choice === 'Intern') {
                 createIntern();
-            } else {
+            } else if (data.choice === 'Quit') {
                 console.log(employeeArr);
                 generatePage(employeeArr);
             };
-        }).then(data => {
-            fs.appendFile("./dist/index.html", `</body></html>`, err => { });
         });
-};
+    };
 questions();

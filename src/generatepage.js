@@ -15,6 +15,7 @@ let pageHandler = `
     <link rel="stylesheet" href="style.css">
   </head>
   <div class = "container">
+  <div class = "row">
   <body style ='background-color: darkcyan'>
   `;
 
@@ -22,9 +23,9 @@ module.exports = data => {
     fs.writeFile('./dist/index.html', pageHandler, err => { });
 
     for (i = 0; i < data.length; i++) {
-       
         if (data[i].type === 'Manager') {
             let employeeCard = `
+        <div class = "col-sm-12">
         <div class = "card">
         <div class = "card-body">
         <h3 class = 'card-title'>${data[i].name}</h3>
@@ -33,12 +34,15 @@ module.exports = data => {
         <a href ="mailto:${data[i].email}">${data[i].email}</a>
         <p class='white card-text'>Office: ${data[i].office}</p>
         </div>
-        </div>`;
+        </div>
+        </div>
+        <div class="row">`;
             fs.appendFile("./dist/index.html", employeeCard, err => { });
         }
-        
+
         else if (data[i].type === 'Engineer') {
-                let employeeCard = `
+            let employeeCard = `
+            <div class = "col-sm-4">
             <div class = "card">
             <div class = "card-body">
             <h3 class = 'card-title'>${data[i].name}</h3>
@@ -47,24 +51,34 @@ module.exports = data => {
             <a href ="mailto:${data[i].email}">${data[i].email}</a>
             <p class='white card-text'>Office: ${data[i].gitHub}</p>
             </div>
+            </div>
             </div>`;
             fs.appendFile("./dist/index.html", employeeCard, err => { });
-        
+
         }
-        
-        else {
+
+        else if (data[i].type === 'Intern') {
             let employeeCard = `
+            <div class ="col-sm-4">
             <div class = "card">
             <div class = "card-body">
             <h3 class = 'card-title'>${data[i].name}</h3>
             <h3 class = 'card-title'>${data[i].type}</h3>
             <p class='white card-text'>Emp. ID: ${data[i].empID}</p>
             <a href ="mailto:${data[i].email}">${data[i].email}</a>
-            <p class='white card-text'>Office: ${data[i].school}</p>
+            <p class='white card-text'>School: ${data[i].school}</p>
+            </div>
             </div>
             </div>`;
-                fs.appendFile("./dist/index.html", employeeCard, err => { });
+            fs.appendFile("./dist/index.html", employeeCard, err => { });
 
+        }
+
+        else {
+            console.log("ERROR: NO TYPE DEFINED");
         };
     };
+
+    fs.appendFile("./dist/index.html", `</div></div></body></html>`, err => { })
+
 };
