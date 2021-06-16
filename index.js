@@ -10,24 +10,52 @@ const employeeArr = [];
 const questions = () => {
     inquirer.prompt([
         {
-            type: 'text',
+            type: 'input',
             name: 'name',
-            message: "Please enter the Manager's name: "
+            message: "Please enter the Manager's name: ",
+            default: "Edward F.",
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the Manager's name: ");
+                    return false;
+                }
+            }
         },
         {
-            type: 'text',
+            type: 'input',
             name: 'empID',
-            message: 'Please enter the employee ID number: '
+            message: 'Please enter the employee ID number: ',
+            default: '08830',
+            validate: empIDInput => {
+                if (empIDInput) {
+                    return true;
+                } else {
+                    console.log('Please enter the employee ID number: ');
+                    return false;
+                }
+            }
         },
         {
-            type: 'text',
+            type: 'input',
             name: 'email',
-            message: 'Please enter the email address: '
+            message: 'Please enter the email address: ',
+            default: 'edwardf@epsilon15.net',
+            validate: emailInput => {
+                if (emailInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the Manager's email: ");
+                    return false;
+                }
+            }
         },
         {
-            type: 'text',
+            type: 'input',
             name: 'office',
-            message: "Please enter the Manager's office: "
+            message: "Please enter the Manager's office: ",
+            default: 'A13'
         },
     ]).then(data => {
         const {
@@ -47,24 +75,52 @@ const questions = () => {
 const createEngineer = () => {
     inquirer.prompt([
         {
-            type: 'text',
+            type: 'input',
             name: 'name',
-            message: "Please enter engineer's name: "
+            message: "Please enter the Engineer's name: ",
+            default: "Scotty Chips",
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the Engineer's name: ");
+                    return false;
+                }
+            }
         },
         {
-            type: 'text',
+            type: 'input',
             name: 'empID',
-            message: "Please enter employee ID: "
+            message: 'Please enter the employee ID number: ',
+            default: '093',
+            validate: empIDInput => {
+                if (empIDInput) {
+                    return true;
+                } else {
+                    console.log('Please enter the employee ID number: ');
+                    return false;
+                }
+            }
         },
         {
-            type: 'text',
+            type: 'input',
             name: 'email',
-            message: "Please enter email address: "
+            message: 'Please enter the email address: ',
+            default: 'scottychips@epsilon15.net',
+            validate: emailInput => {
+                if (emailInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the Engineer's email: ");
+                    return false;
+                }
+            }
         },
         {
-            type: 'text',
+            type: 'input',
             name: 'gitHub',
-            message: 'Please enter gitHub username: '
+            message: 'Please enter gitHub username: ',
+            default: 'scottychips'
         },
     ]).then(data => {
         const {
@@ -84,24 +140,52 @@ const createEngineer = () => {
 const createIntern = () => {
     inquirer.prompt([
         {
-            type: 'text',
+            type: 'input',
             name: 'name',
-            message: "Please enter intern's name: "
+            message: "Please enter the Intern's name: ",
+            default: "Joseph Greenhorn",
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the Intern's name: ");
+                    return false;
+                }
+            }
         },
         {
-            type: 'text',
+            type: 'input',
             name: 'empID',
-            message: "Please enter employee ID: "
+            message: 'Please enter the employee ID number: ',
+            default: '91521312',
+            validate: empIDInput => {
+                if (empIDInput) {
+                    return true;
+                } else {
+                    console.log('Please enter the employee ID number: ');
+                    return false;
+                }
+            }
         },
         {
-            type: 'text',
+            type: 'input',
             name: 'email',
-            message: "Please enter email address: "
+            message: 'Please enter the email address: ',
+            default: 'master.blaster1337@twitch.tv',
+            validate: emailInput => {
+                if (emailInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the Interns's email: ");
+                    return false;
+                }
+            }
         },
         {
-            type: 'text',
+            type: 'input',
             name: 'school',
-            message: "Please enter intern's school: "
+            message: "Please enter intern's school: ",
+            default: 'Rutgers'
         },
     ]).then(data => {
         const {
