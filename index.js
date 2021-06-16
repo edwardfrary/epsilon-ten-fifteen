@@ -41,7 +41,7 @@ const questions = () => {
             type: 'input',
             name: 'email',
             message: 'Please enter the email address: ',
-            default: 'edwardf@epsilon15.net',
+            default: 'edwardf@epsilon1015.net',
             validate: emailInput => {
                 if (emailInput) {
                     return true;
@@ -106,7 +106,7 @@ const createEngineer = () => {
             type: 'input',
             name: 'email',
             message: 'Please enter the email address: ',
-            default: 'scottychips@epsilon15.net',
+            default: 'scottychips@epsilon1015.net',
             validate: emailInput => {
                 if (emailInput) {
                     return true;
